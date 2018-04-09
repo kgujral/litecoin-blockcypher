@@ -82,6 +82,106 @@ import java.util.List;
 @Path("/txs/")
 public class Transaction {
 
+    
+  public void setHash(String hash) {
+    this.hash = hash;
+  }
+
+  
+  public void setBlockHash(String blockHash) {
+    this.blockHash = blockHash;
+  }
+
+  
+  public void setBlockHeight(Long blockHeight) {
+    this.blockHeight = blockHeight;
+  }
+
+  
+  public void setAddresses(List<String> addresses) {
+    this.addresses = addresses;
+  }
+
+  
+  public void setTotal(BigDecimal total) {
+    this.total = total;
+  }
+
+  
+  public void setRelayedBy(String relayedBy) {
+    this.relayedBy = relayedBy;
+  }
+
+  
+  public void setConfirmed(String confirmed) {
+    this.confirmed = confirmed;
+  }
+
+  
+  public void setReceived(String received) {
+    this.received = received;
+  }
+
+  
+  public void setVer(Integer ver) {
+    this.ver = ver;
+  }
+
+  
+  public void setLockTime(Long lockTime) {
+    this.lockTime = lockTime;
+  }
+
+  
+  public void setVinSz(Long vinSz) {
+    this.vinSz = vinSz;
+  }
+
+  
+  public void setVoutSz(Long voutSz) {
+    this.voutSz = voutSz;
+  }
+
+  
+  public void setConfirmations(Long confirmations) {
+    this.confirmations = confirmations;
+  }
+
+  
+  public void setReceiveCount(Long receiveCount) {
+    this.receiveCount = receiveCount;
+  }
+
+  
+  public void setConfidence(BigDecimal confidence) {
+    this.confidence = confidence;
+  }
+
+  
+  public void setPreference(String preference) {
+    this.preference = preference;
+  }
+
+  
+  public void setDoubleSpend(boolean doubleSpend) {
+    this.doubleSpend = doubleSpend;
+  }
+
+  
+  public void setDoubleSpendTx(String doubleSpendTx) {
+    this.doubleSpendTx = doubleSpendTx;
+  }
+
+  
+  public void setInputs(List<Input> inputs) {
+    this.inputs = inputs;
+  }
+
+  
+  public void setOutputs(List<Output> outputs) {
+    this.outputs = outputs;
+  }
+
     private static final Logger logger = Logger.getLogger(Transaction.class);
 
     private String hash;

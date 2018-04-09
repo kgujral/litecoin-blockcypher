@@ -1,3 +1,4 @@
+
 package com.blockcypher.model.transaction.output;
 
 import java.math.BigDecimal;
@@ -5,56 +6,89 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Output of a transaction, ie:
- * {
- * "value": 100000000,
- * "script": "76a914a4e9eecbbfd050cb2d47eb0452a97ccb607f53c788ac",
- * "spent_by": "",
- * "addresses": [
- * "mvYwMT3aZ5jNcRNNjv7ckxjbqMDtvQbAHz"
- * ],
- * "script_type": "pay-to-pubkey-hash"
- * }
+ * Output of a transaction, ie: { "value": 100000000, "script":
+ * "76a914a4e9eecbbfd050cb2d47eb0452a97ccb607f53c788ac", "spent_by": "",
+ * "addresses": [ "mvYwMT3aZ5jNcRNNjv7ckxjbqMDtvQbAHz" ], "script_type":
+ * "pay-to-pubkey-hash" }
+ * 
  * @author <a href="mailto:seb.auvray@gmail.com">Sebastien Auvray</a>
  */
 public class Output {
 
-    private BigDecimal value;
-    private String script;
-    private String spentBy;
-    private List<String> addresses = new ArrayList<String>();
-    private String scriptType;
-    private String dataHex;
-    private String dataString;
+  private BigDecimal value;
 
-    public Output() {
-    }
+  private String script;
 
-    public boolean addAddress(String address) {
-        return addresses.add(address);
-    }
+  private String spentBy;
 
-    public void setScriptType(String scriptType) {
-        this.scriptType = scriptType;
-    }
+  private List<String> addresses = new ArrayList<String>();
 
-    public List<String> getAddresses() {
-        return addresses;
-    }
+  private String scriptType;
 
-    public BigDecimal getValue() {
-        return value;
-    }
+  private String dataHex;
 
-    public void setValue(BigDecimal value) {
-        this.value = value;
-    }
+  private String dataString;
 
-    public String getDataHex() {
-        return dataHex;
-    }
+  public String getScript() {
+    return script;
+  }
 
-    public String getDataString() {
-        return dataHex;
-    }
+  public void setScript(String script) {
+    this.script = script;
+  }
+
+  public String getSpentBy() {
+    return spentBy;
+  }
+
+  public void setSpentBy(String spentBy) {
+    this.spentBy = spentBy;
+  }
+
+  public String getScriptType() {
+    return scriptType;
+  }
+
+  public void setAddresses(List<String> addresses) {
+    this.addresses = addresses;
+  }
+
+  public void setDataHex(String dataHex) {
+    this.dataHex = dataHex;
+  }
+
+  public void setDataString(String dataString) {
+    this.dataString = dataString;
+  }
+
+  public Output() {
+  }
+
+  public boolean addAddress(String address) {
+    return addresses.add(address);
+  }
+
+  public void setScriptType(String scriptType) {
+    this.scriptType = scriptType;
+  }
+
+  public List<String> getAddresses() {
+    return addresses;
+  }
+
+  public BigDecimal getValue() {
+    return value;
+  }
+
+  public void setValue(BigDecimal value) {
+    this.value = value;
+  }
+
+  public String getDataHex() {
+    return dataHex;
+  }
+
+  public String getDataString() {
+    return dataString;
+  }
 }
